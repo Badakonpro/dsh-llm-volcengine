@@ -1,0 +1,19 @@
+# dsh-llm-volcengine bundle patch: registers Volcengine Ark Agent Plan and
+# Coding Plan provider routes through a self-contained pi-ai adapter.
+#
+# Optional config (all fields optional):
+#   agentPlanApiKeyEnv  - first credential reference tried for the Agent Plan
+#                         route. Default: ARK_AGENT_PLAN_API_KEY (with
+#                         VOLCENGINE_ARK_PLAN_API_KEY and ARK_CODE_API_KEY as
+#                         fallbacks).
+#   codingPlanApiKeyEnv - first credential reference for the Coding Plan route.
+#                         Default: ARK_CODING_PLAN_API_KEY (with
+#                         VOLCENGINE_CODING_API_KEY and HUOSHAN_API_KEY as
+#                         fallbacks).
+#   defaultReasoning    - default thinking level for both routes:
+#                         off | minimal | low | medium | high | xhigh | max.
+#                         Default: high.
+
+- insert:
+    - id: llm-volcengine
+      name: dsh-llm-volcengine

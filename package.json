@@ -1,0 +1,43 @@
+{
+  "name": "dsh-llm-volcengine",
+  "version": "0.1.0",
+  "description": "Volcengine Ark Agent Plan & Coding Plan providers for DeepSeek Harness (DSH), with verified thinking-effort compatibility",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "volcengine",
+    "ark",
+    "agent-plan",
+    "coding-plan",
+    "llm"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-credentials": "*",
+    "@deepseek-ai/dsh-launch-environment": "*",
+    "@deepseek-ai/dsh-llm": "*",
+    "@deepseek-ai/dsh-llm-pi-ai": "*",
+    "@earendil-works/pi-ai": "*"
+  }
+}
